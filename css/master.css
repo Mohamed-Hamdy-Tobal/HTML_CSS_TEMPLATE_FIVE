@@ -18,6 +18,7 @@
 :root {
     --main-color : #2196F3;
     --main-color-alt : #1787e0;
+    --main-trans : 0.3s
 }
 html {
     scroll-behavior: smooth;
@@ -63,3 +64,85 @@ textarea:focus  {
 }
 
 /* End Global Styles */
+
+/* 2 - Start Common Style */
+
+/* End Common Style */
+
+
+/* 3 - Sections */
+
+/* 3.0 - Start Header */
+header {
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0 0 10px #ddd;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+header .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--main-color);
+    height: 73px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 767px) {
+    header .logo {
+        width: 100%;
+        height: 65px;
+    }
+}
+header .header-link {
+    display: flex;
+}
+@media (max-width: 767px) {
+    header .header-link {
+        margin: auto;
+    }
+}
+header .header-link > li > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 73px;
+    padding: 0 30px;
+    position: relative;
+    color: #000;
+    font-size: 18px;
+    transition: var(--main-trans);
+    z-index: 1;
+}
+@media (max-width: 767px) {
+    header .header-link > li > a {
+        height: 45px;
+        padding: 0 10px;
+        font-size: 14px;
+    }
+}
+header .header-link > li > a:hover {
+    color : var(--main-color)
+}
+header .header-link > li > a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #FAFAFA;
+    border-top: 3px solid var(--main-color);
+    z-index: -1;
+    transition: var(--main-trans);
+}
+header .header-link > li > a:hover::before {
+    width: 100%;
+}
+/* End Header */
