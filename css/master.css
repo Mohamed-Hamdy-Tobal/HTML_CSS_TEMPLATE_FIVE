@@ -153,6 +153,7 @@ header .mega-menu {
     top: 102%;
     left: 0;
     display: flex;
+    gap: 40px;
     justify-content: space-between;
     width: 100%;
     background: #fff;
@@ -172,6 +173,17 @@ header .mega-menu {
     opacity: 0;
     z-index: 10;
 }
+header .mega-menu .image img {
+    max-width: 100%;
+}
+@media (max-width: 991px) {
+    header .mega-menu {
+        gap: 0;
+    }
+    header .mega-menu .image img {
+        display  : none
+    }
+}
 header .header-link li:last-child:hover .mega-menu {
     transform: scaleY(1);
     -webkit-transform: scaleY(1);
@@ -184,22 +196,35 @@ header .mega-menu .mega-list {
     display: flex;
     justify-content: space-between;
     flex-basis: 48%;
+    gap: 40px;
+    flex: 1;
+}
+@media (max-width: 768px) {
+    header .mega-menu .mega-list {
+        flex-direction: column;
+        gap: 0;
+    }
 }
 header .mega-menu .mega-list ul{
-    width: 45%;
+    min-width: 250px;
 }
 header .mega-menu .mega-list ul > li > a{
     display: block;
     padding: 15px 15px 15px 0;
     font-size: 18px;
     color: var(--main-color);
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #e9e6e6;
     font-weight: bold;
     position: relative;
     z-index: 1;
 }
 header .mega-menu .mega-list ul > li:last-child a {
     border: none;
+}
+@media (max-width: 768px) {
+    header .mega-menu .mega-list ul:first-of-type > li:last-child a {
+        border-bottom: 1px solid #e9e6e6;
+    }
 }
 header .mega-menu .mega-list ul > li a::after {
     position: absolute;
