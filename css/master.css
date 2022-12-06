@@ -6,6 +6,9 @@
         3.0 - Header Section
         3.1 - Landing Section
         3.2 - Article Section
+        3.3 - Gallery
+        3.4 - Features
+        3.5 - Testimonials
     4 - Animation
  */
 
@@ -490,7 +493,7 @@ header .mega-menu .mega-list ul > li > a i{
 }
 /* End Article */
 
-/* Start Gallery */
+/* 3.3 - Start Gallery */
 .gallery {
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
@@ -547,7 +550,7 @@ header .mega-menu .mega-list ul > li > a i{
 }
 /* End Gallery */
 
-/* Start Features */
+/* 3.4 - Start Features */
 .features {
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
@@ -570,7 +573,7 @@ header .mega-menu .mega-list ul > li > a i{
 .features .box .img-holder::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -686,6 +689,60 @@ header .mega-menu .mega-list ul > li > a i{
     background-position: right bottom;
 }
 /* End Features */
+
+/* 3.5 - Start Testimonials */
+.testimonials {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    position: relative;
+    background-color: var(--section-bg);
+}
+.testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.testimonials .box {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+.testimonials .box img {
+    position: absolute;
+    top: -50px;
+    right: -10px;
+    width: 100px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 10px solid var(--section-bg);
+}
+.testimonials .box h3 {
+    margin: 0 0 10px;
+}
+.testimonials .box .title {
+    color: var(--sub-title);
+    margin-bottom: 10px;
+    display: block;
+}
+.testimonials .box .filled {
+    color: #ffc107
+}
+.testimonials .box p {
+    line-height: 1.6;
+    color: #555;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+/* End Testimonials */
 
 /* Start Animation */
 @keyframes up-down {
