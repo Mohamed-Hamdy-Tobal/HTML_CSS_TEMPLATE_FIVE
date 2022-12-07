@@ -88,7 +88,6 @@ textarea:focus  {
     position: relative;
     z-index: 1;
     transition: var(--main-transition);
-    font-weight: bold;
 }
 .main-title::after,
 .main-title::before {
@@ -715,7 +714,7 @@ header .mega-menu .mega-list ul > li > a i{
 }
 .testimonials .box img {
     position: absolute;
-    top: -50px;
+    top: -20px;
     right: -10px;
     width: 100px;
     border-radius: 50%;
@@ -743,6 +742,36 @@ header .mega-menu .mega-list ul > li > a i{
     margin-bottom: 0px;
 }
 /* End Testimonials */
+
+/* 3.06 Start Team */
+.team {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    position: relative;
+}
+.team .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.team .team-box {
+    position: relative;
+}
+.team .team-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 60px);
+    height: 100%;
+    background: #F3F3F3;
+    z-index: -2;
+    border-radius: 10px;
+}
+.team .team-box .data img {
+    max-width: 100%;
+}
+/* End Team */
 
 /* Start Animation */
 @keyframes up-down {
