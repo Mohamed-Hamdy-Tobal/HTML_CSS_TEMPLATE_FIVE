@@ -757,19 +757,88 @@ header .mega-menu .mega-list ul > li > a i{
 .team .team-box {
     position: relative;
 }
-.team .team-box::before {
+.team .team-box::before,
+.team .team-box::after    {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
-    width: calc(100% - 60px);
     height: 100%;
+    border-radius: 10px;
+    transition: var(--main-trans);
+    -webkit-transition: var(--main-trans);
+    -moz-transition: var(--main-trans);
+    -ms-transition: var(--main-trans);
+    -o-transition: var(--main-trans);
+}
+.team .team-box::before {
+    width: calc(100% - 60px);
     background: #F3F3F3;
     z-index: -2;
-    border-radius: 10px;
+}
+.team .team-box::after {
+    width: 0;
+    background: #e4e4e4;
+    z-index: -1;
+}
+.team .team-box:hover::after {
+    width: calc(100% - 60px);
 }
 .team .team-box .data img {
-    max-width: 100%;
+    width: calc(100% - 60px);
+    transition: var(--main-trans);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.team .team-box:hover .data img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+.team .team-box .data {
+    padding-top: 60px;
+    display: flex;
+    align-items: center;
+}
+.team .team-box .data .social {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.team .team-box .data .social a {
+    width: 60px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--sub-title);
+    transition: color var(--main-trans);
+    -webkit-transition: color var(--main-trans);
+    -moz-transition: color var(--main-trans);
+    -ms-transition: color var(--main-trans);
+    -o-transition: color var(--main-trans);
+}
+.team .team-box .data .social a:hover {
+    color :var(--main-color-alt);
+}
+.team .team-box .info {
+    padding-left: 85px;
+}
+.team .team-box .info h3 {
+    color: var(--main-color);
+    transition: color var(--main-trans);
+    font-size: 22px;
+    margin-top: 15px;
+}
+.team .team-box:hover .info h3 {
+    color: var(--sub-title);
+}
+.team .team-box .info p {
+    margin: 15px 0 25px 0;
 }
 /* End Team */
 
