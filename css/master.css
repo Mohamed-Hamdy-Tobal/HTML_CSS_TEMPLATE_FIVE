@@ -842,6 +842,46 @@ header .mega-menu .mega-list ul > li > a i{
 }
 /* End Team */
 
+/* 3.07 - Start Services */
+.services {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    position: relative;
+    background-color: var(--section-bg);
+}
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.services .container .box {
+    position: relative;
+    background: #fff;
+    box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.13)  ,0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    counter-increment: service;
+}
+.services .container .box i{
+    margin: 40px auto 20px;
+    color: #d5d5d5;
+    display: block;
+    text-align: center;
+}
+.services .container .box h3{
+    color: var(--main-color);
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.services .container .box a{
+    display: block;
+    color: var(--main-color);
+    text-align: end;
+    padding: 15px;
+    background: #f7f7f7db;
+
+}
+/* End Services */
+
 /* Start Animation */
 @keyframes up-down {
     0%, 100% {
