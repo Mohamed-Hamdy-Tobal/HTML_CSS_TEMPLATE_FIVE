@@ -943,6 +943,58 @@ header .mega-menu .mega-list ul > li > a i{
 }
 /* End Services */
 
+/* 3.08 - Start Our Skills */
+.our-skills {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    position: relative;
+}
+.our-skills .container {
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 991px) {
+    .our-skills .container img {
+        display: none
+    }
+}
+.our-skills .skills {
+    flex: 1;
+}
+.our-skills .skill {
+    margin-bottom: 18px;
+}
+.our-skills .skills h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.our-skills .skills h3 span {
+    color: var(--main-color);
+    font-size: 12px;
+    padding: 3px 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.our-skills .skills .prog {
+    height: 30px;
+    background: #eee;
+    margin: 10px auto 0;
+    position: relative;
+}
+.our-skills .skills .prog span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--main-color);
+}
+/* End Our Skills */
+
 /* Start Animation */
 @keyframes up-down {
     0%, 100% {
