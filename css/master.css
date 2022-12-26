@@ -1232,6 +1232,204 @@ header .mega-menu .mega-list ul > li > a i{
 }
 /* End Events */
 
+/* Start Price */
+.price {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: var(--section-bg);
+}
+.price .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.price .container .box {
+    background-color: #fff;
+    box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.13)  ,0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    position: relative;
+    transition: var(--main-trans);
+    -webkit-transition: var(--main-trans);
+    -moz-transition: var(--main-trans);
+    -ms-transition: var(--main-trans);
+    -o-transition: var(--main-trans);
+    text-align: center;
+    z-index: 1;
+}
+.price .container .box::before,
+.price .container .box::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 50%;
+    background-color: #f6f6f6;
+    z-index: -1;
+    transition: var(--main-trans);
+}
+.price .container .box::before {
+    top: 0;
+    left: 0
+}
+.price .container .box::after {
+    bottom: 0;
+    right: 0
+}
+.price .container .box:hover::before,
+.price .container .box:hover::after {
+    width: 100%;
+}
+@media (min-width : 1200px) {
+    .price .container .box.popular {
+        top: -20px;
+    }
+}
+.price .container .box.popular .lable{
+    position: absolute;
+    writing-mode: vertical-lr;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px 10px 35px 10px;
+    right: 20px;
+    font-weight: bold;
+    width: 40px;
+}
+.price .container .box.popular .lable::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left : 0;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    border-width: 20px;
+}
+.price .container .box .title{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 30px 0;
+    letter-spacing: -2;
+}
+.price .container .box .price-box{
+    margin-bottom: 20px;
+}
+.price .container .box img{
+    width: 80px;
+    margin-bottom: 30px;
+}
+.price .container .box .amount{
+    display: block;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: var(--main-color);
+}
+.price .container .box .time{
+    color : var(--sub-title)
+}
+.price .container .box ul {
+    text-align: left;
+}
+.price .container .box ul li {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    position: relative;
+}
+.price .container .box ul li::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: 900;
+    margin-right: 10px;
+    color: var(--main-color-alt);
+}
+.price .container .box a {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 40px;
+    padding: 15px 20px;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    font-weight: bold;
+    transition: var(--main-trans);
+    -webkit-transition: var(--main-trans);
+    -moz-transition: var(--main-trans);
+    -ms-transition: var(--main-trans);
+    -o-transition: var(--main-trans);
+}
+.price .container .box a:hover {
+    background-color: var(--main-color-alt);
+    border-color: var(--main-color-alt);
+    color : #fff
+}
+/* End Price */
+
+/* Start Videos */
+.videos {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+.videos .holder {
+    display: flex;
+    justify-content: center;
+    background-color: var(--section-bg);
+    border: 1px solid #ddd
+}
+@media (max-width: 991px) {
+    .videos .holder {
+        flex-direction: column;
+    }
+}
+.videos .holder .list {
+    min-width: 300px;
+    background-color: #fff;
+}
+.videos .holder .list .name{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #F4F4F4;
+    color : #333;
+}
+.videos .holder .list ul li{
+    padding: 20px;
+    border-top: var(--section-bg);
+    transition: var(--main-trans);
+    -webkit-transition: var(--main-trans);
+    -moz-transition: var(--main-trans);
+    -ms-transition: var(--main-trans);
+    -o-transition: var(--main-trans);
+    cursor: pointer;
+}
+.videos .holder .list ul li:hover {
+    background-color: #FAFAFA;
+    color: var(--main-color)
+}
+.videos .holder .list ul li span{
+    display: block;
+    margin-top: 10px;
+    color: var(--sub-title)
+}
+.videos .holder .preview{
+    background-color: #e2e2e2;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+}
+.videos .holder .preview img{
+    max-width: 100%;
+}
+.videos .holder .preview .info{
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 20px;
+}
+/* End Videos */
+
 /* Start Animation */
 @keyframes up-down {
     0%, 100% {
