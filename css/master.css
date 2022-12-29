@@ -1430,6 +1430,72 @@ header .mega-menu .mega-list ul > li > a i{
 }
 /* End Videos */
 
+/* Start State */
+.state {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+.state h2.title {
+    width: fit-content;
+    margin: 0 auto 50px;
+    font-size: 40px;
+}
+.state .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+.state .container .box {
+    padding: 20px;
+    text-align: center;
+    opacity: .7;
+    transition: opacity var(--main-trans);
+    -webkit-transition: opacity var(--main-trans);
+    -moz-transition: opacity var(--main-trans);
+    -ms-transition: opacity var(--main-trans);
+    -o-transition: opacity var(--main-trans);
+    position: relative;
+}
+.state .container .box::before,
+.state .container .box::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0;
+    background-color: var(--main-color);
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+.state .container .box::after{
+    bottom: 0;
+    left: 0
+}
+.state .container .box::before{
+    top: 0;
+    right: 0
+}
+.state .container .box:hover::before,
+.state .container .box:hover::after {
+    height: 100%;
+}
+.state .container .box:hover{
+    opacity: 1;
+}
+.state .container .box h2 {
+    font-size: 50px;
+    margin: 10px 0;
+}
+.state .container .box span {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 22px;
+    color: var(--main-color-alt);
+}
+/* End State */
+
 /* Start Animation */
 @keyframes up-down {
     0%, 100% {
