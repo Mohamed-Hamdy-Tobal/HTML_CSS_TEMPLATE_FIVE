@@ -1432,13 +1432,12 @@ header .mega-menu .mega-list ul > li > a i{
 
 /* Start State */
 .state {
-    padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
 }
 .state h2.title {
     width: fit-content;
     margin: 0 auto 50px;
-    font-size: 40px;
+    font-size: 35px;
 }
 .state .container {
     display: grid;
@@ -1539,7 +1538,7 @@ header .mega-menu .mega-list ul > li > a i{
     left: 0;
     height: 100%;
     width: 100%;
-    background-color:rgba(3, 168, 244, 0.97);
+    background-color:rgba(33, 149, 243, 0.97);
     z-index: -1;
 }
 .discount img {
