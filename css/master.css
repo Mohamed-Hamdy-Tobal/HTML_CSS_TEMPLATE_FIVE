@@ -1496,6 +1496,107 @@ header .mega-menu .mega-list ul > li > a i{
 }
 /* End State */
 
+/* Start Discount */
+.discount {
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+.discount .content {
+    text-align: center;
+    padding: 0 20px;
+}
+.discount .content h1 {
+    font-size: 40px;
+    letter-spacing: -2px;
+    margin: 30px 0;
+}
+.discount .content p {
+    font-size: 20px;
+    line-height: 1.7;
+    max-width: 500px;
+    margin: 25px 0;
+}
+.discount .review {
+    background-image: url("../images/discount-background1.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    animation: change-background 12s linear infinite;
+    -webkit-animation: change-background 12s linear infinite;
+}
+.discount .review::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(3, 168, 244, 0.97);
+    z-index: -1;
+}
+.discount img {
+    width: 300px;
+    max-width: 100%;
+    padding-bottom: 30px;
+}
+.discount .form {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 991px) {
+    .discount .review,
+    .discount .form {
+        flex-basis: 100%;
+    }
+}
+.discount .form .input {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ccc;
+    background: #f9f9f9;
+    caret-color: var(--main-color);
+    position: relative;
+}
+.discount .form textarea {
+    resize: none;
+    height: 200px;
+}
+.discount .form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: var(--main-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    transition: var(--main-trans);
+    cursor: pointer;
+}
+@media (max-width: 991px) {
+    .discount .form input[type="submit"] {
+        margin-bottom: 50px;
+    }
+}
+.discount .form input[type="submit"]:hover {
+    background-color: var(--main-color-alt);
+}
+
+/* End Discount */
+
 /* Start Animation */
 @keyframes up-down {
     0%, 100% {
@@ -1545,6 +1646,14 @@ header .mega-menu .mega-list ul > li > a i{
         opacity: 0;
         width: 200%;
         height: 200%;
+    }
+}
+@keyframes change-background {
+    0%, 100% {
+        background-image: url("../images/discount-background1.jpg");
+    }
+    50% {
+        background-image: url("../images/discount-background2.jpg");
     }
 }
 /* End Animation */
