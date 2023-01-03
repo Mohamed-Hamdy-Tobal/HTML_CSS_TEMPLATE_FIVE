@@ -1596,6 +1596,12 @@ header .mega-menu .mega-list ul > li > a i{
 
 /* End Discount */
 
+/* Start Footer */
+footer img {
+    max-width: 100%;
+}
+/* End Footer */
+
 /* Start Animation */
 @keyframes up-down {
     0%, 100% {
