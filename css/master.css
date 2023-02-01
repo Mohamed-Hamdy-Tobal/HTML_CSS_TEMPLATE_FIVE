@@ -186,6 +186,20 @@ textarea:focus  {
     bottom: 200px;
     left: 0;
 }
+
+
+::-webkit-scrollbar {   /* For Size Of Scrol*/
+    width: 20px;
+}
+::-webkit-scrollbar-track {     /* For Background Of Scrol*/
+    background-color: #fbfbfb;
+}
+::-webkit-scrollbar-thumb {     /* For Scrol Itself*/
+    background-color: #1786e0a9;
+}
+::-webkit-scrollbar-thumb:hover {    
+    background-color: var(--main-color);
+}
 /* End Common Style */
 
 
